@@ -1,0 +1,101 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}زوايا التثقف{% endblock %}
+
+{% block content %}
+<section class="education-hero py-5 mt-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3">زوايا <span class="highlight">التثقف</span></h1>
+        <p class="lead section-sub">تعمّق في تاريخ وثقافة الزراعة السعودية عبر محتوى غني وتفاعلي</p>
+        <div class="divider mx-auto"></div>
+    </div>
+</section>
+
+<section class="edu-content pb-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="premium-tool-card text-center p-4 h-100">
+                    <div class="icon-box mb-3 fs-1 text-success">
+                        <i class="bi bi-book-half"></i>
+                    </div>
+                    <h4>روايات تاريخية</h4>
+                    <p>قصص من قلب المزارع القديمة، تروي كفاح الأجداد مع الأرض ونظم الري التقليدية.</p>
+                    <a href="#" class="btn btn-outline-success btn-sm mt-auto">اقرأ المزيد</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="premium-tool-card text-center p-4 h-100">
+                    <div class="icon-box mb-3 fs-1 text-success">
+                        <i class="bi bi-play-btn-fill"></i>
+                    </div>
+                    <h4>أفلام وثائقية</h4>
+                    <p>رحلة بصرية تأخذك إلى واحات المملكة، من مزارع البن في جازان إلى نخيل الأحساء.</p>
+                    <a href="#" class="btn btn-outline-success btn-sm mt-auto">شاهد الآن</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="premium-tool-card text-center p-4 h-100">
+                    <div class="icon-box mb-3 fs-1 text-success">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+                    <h4>خرائط ذهنية</h4>
+                    <p>تبسيط للمفاهيم الزراعية المعقدة ودورات حياة المحاصيل السعودية بأسلوب بصري ممتع.</p>
+                    <a href="#" class="btn btn-outline-success btn-sm mt-auto">استعرض الخرائط</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="premium-tool-card text-center p-4 h-100">
+                    <div class="icon-box mb-3 fs-1 text-success">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+                    <h4>أبحاث ومقالات</h4>
+                    <p>محتوى علمي رصين يتناول مستقبل الزراعة المستدامة وتقنيات الأمن الغذائي الحديثة.</p>
+                    <a href="#" class="btn btn-outline-success btn-sm mt-auto">تصفح الأبحاث</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="explore-more py-5 bg-gradient-premium">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="{% static 'images/palm-bg.jpg' %}" class="img-fluid rounded-4 shadow" alt="استكشف التثقف">
+            </div>
+            <div class="col-md-6 p-4">
+                <h2 class="mb-4">لماذا نتثقف زراعياً؟</h2>
+                <p>الوعي بالزراعة ليس مجرد معرفة بكيفية نمو النبات، بل هو فهم لهويتنا الوطنية واستدامة مواردنا. من خلال
+                    "زوايا التثقف"، نهدف لبناء جيل يعتز بجذوره ويساهم في اخضرار مستقبله.</p>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> فهم تقنيات الري الذكي</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> التعرف على المواسم الزراعية السعودية
+                    </li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> دعم مبادرة السعودية الخضراء</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+.divider {
+width: 80px;
+height: 4px;
+background: #28a745;
+border-radius: 2px;
+margin-top: 10px;
+}
+
+.highlight {
+color: #198754;
+}
+</style>
+
+{% endblock %}
