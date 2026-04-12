@@ -1,0 +1,264 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="page-hero">
+    <video autoplay muted loop playsinline class="page-hero-video">
+        <source src="{% static 'videos/City.mp4' %}" type="video/mp4">
+    </video>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content text-center">
+        <h1>
+            <i class="bi bi-patch-check-fill"></i>
+            زراعة المدينة.. بركة العجوة وعبق النعناع
+        </h1>
+        <p>
+            <i class="bi bi-geo-alt-fill"></i>
+            من بساتين العالية إلى مزارع وادي الفرع.. قصة نماء باركها سيد المرسلين
+        </p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-md-6 animate__animated animate__fadeInRight">
+                <div class="page-video-box shadow-lg rounded-4 overflow-hidden border border-warning border-opacity-10">
+                    <iframe src="https://www.youtube.com/embed/gixh2ME8OZ4" title="الزراعة في منطقة المدينة المنورة"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                        style="width:100%; height:400px; display:block;">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="col-md-6 animate__animated animate__fadeInLeft">
+                <h2 class="display-5 fw-bold mb-3">
+                    <i class="bi bi-info-circle text-success"></i>
+                    المدينة.. واحة النخيل الخالدة
+                </h2>
+
+                <div class="page-separator mb-4"></div>
+
+                <p class="lead fw-normal text-dark mb-4">
+                    تعتبر منطقة المدينة المنورة من أهم المرتكزات الزراعية في المملكة، حيث تشتهر بإنتاج أجود أنواع
+                    <strong>التمور</strong> عالمياً، بالإضافة إلى تميزها في زراعة <strong>الخضروات الورقية</strong>
+                    والحمضيات في خيبر والعلا.
+                </p>
+
+                <div class="p-3 bg-light border-start border-success border-4 rounded-3 shadow-sm">
+                    <p class="mb-0 italic">
+                        ترتكز الزراعة في طيبة على المياه الجوفية والآبار التاريخية، وتتوسع اليوم عبر تقنيات الري الحديثة
+                        لتشمل مشاريع زراعية ضخمة في وادي العقيق ووادي الفرع.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">
+            <i class="bi bi-clock-history text-success"></i> محطات في مسيرة النماء
+        </h2>
+
+        <div class="page-timeline">
+            <div class="page-timeline-item left">
+                <div class="page-timeline-img shadow-sm">
+                    <i class="bi bi-calendar-event"></i>
+                </div>
+                <div class="page-timeline-content border-start border-success border-5">
+                    <h4 class="fw-bold text-success">بساتين العالية</h4>
+                    <span class="badge bg-success mb-2">إرث نبوي</span>
+                    <p class="mb-0 text-muted">بساتين المدينة التاريخية التي احتضنت أولى طلائع النخيل وباركتها اليد
+                        النبوية الشريفة، لتكون منبعاً للعجوة والبركة.</p>
+                </div>
+            </div>
+
+            <div class="page-timeline-item right">
+                <div class="page-timeline-img shadow-sm">
+                    <i class="bi bi-search"></i>
+                </div>
+                <div class="page-timeline-content border-start border-warning border-5">
+                    <h4 class="fw-bold text-warning">تطوير وادي الصفراء</h4>
+                    <span class="badge bg-warning text-dark mb-2">توسع زراعي</span>
+                    <p class="mb-0 text-muted">تحويل الأودية التاريخية في المنطقة إلى مناطق إنتاج كبرى للخضروات والحبوب
+                        لسد احتياجات المنطقة المركزية.</p>
+                </div>
+            </div>
+
+            <div class="page-timeline-item left">
+                <div class="page-timeline-img shadow-sm">
+                    <i class="bi bi-award"></i>
+                </div>
+                <div class="page-timeline-content border-start border-primary border-5">
+                    <h4 class="fw-bold text-primary">بورصة التمور</h4>
+                    <span class="badge bg-primary mb-2">مركز عالمي</span>
+                    <p class="mb-0 text-muted">تأسيس مراكز عالمية لفرز وتصدير تمور المدينة (عجوة، صفاوي، برني) لتصل إلى
+                        أكثر من 60 دولة حول العالم.</p>
+                </div>
+            </div>
+
+            <div class="page-timeline-item right">
+                <div class="page-timeline-img shadow-sm">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div class="page-timeline-content border-start border-info border-5">
+                    <h4 class="fw-bold text-info">الزراعة الذكية بالعلا</h4>
+                    <span class="badge bg-info text-dark mb-2">رؤية 2030</span>
+                    <p class="mb-0 text-muted">إطلاق مشاريع الزراعة المستدامة في محافظة العلا لتطوير قطاع الحمضيات
+                        والمحاصيل النوعية بتقنيات توفير المياه.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold page-festivals-title">
+                <i class="bi bi-calendar-event text-danger"></i> مهرجانات الفرح والأصالة
+                <div class="page-separator-v2"></div>
+            </h2>
+            <p class="text-muted mt-3">فعاليات تحتفي بهوية المدينة الزراعية</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden page-festival-card">
+                    <img src="{% static 'images/dates_fest_medina.jpg' %}" class="card-img-top" alt="مهرجان التمور"
+                        style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="fw-bold text-warning">مهرجان تمور المدينة</h5>
+                        <p class="card-text text-muted small flex-grow-1">أكبر تجمع لمنتجي التمور في المنطقة، يركز على
+                            تسويق "العجوة" والأنواع الفاخرة التي يطلبها الزوار.</p>
+                        <a href="https://www.spa.gov.sa/2288417" target="_blank"
+                            class="btn btn-outline-warning btn-sm rounded-pill mt-3">التفاصيل <i
+                                class="bi bi-arrow-left-short"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden page-festival-card">
+                    <img src="{% static 'images/mint_fest.jpg' %}" class="card-img-top" alt="مهرجان النعناع"
+                        style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="fw-bold text-success">فعالية النعناع المديني</h5>
+                        <p class="card-text text-muted small flex-grow-1">يحتفي بـ "الحبق" والنعناع الحساوي والمغربي
+                            الذي تشتهر به مزارع المدينة بطعمه ورائحته الفريدة.</p>
+                        <a href="#" target="_blank" class="btn btn-outline-success btn-sm rounded-pill mt-3">التفاصيل <i
+                                class="bi bi-arrow-left-short"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden page-festival-card">
+                    <img src="{% static 'images/citrus_fest_ula.jpg' %}" class="card-img-top" alt="مهرجان الحمضيات"
+                        style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="fw-bold" style="color: #ff6d00;">مهرجان حمضيات العلا</h5>
+                        <p class="card-text text-muted small flex-grow-1">يعرض أكثر من 29 نوعاً من الحمضيات الفاخرة مثل
+                            البرتقال والليمون والترنج في مزارع العلا الخلابة.</p>
+                        <a href="https://www.rcu.gov.sa" target="_blank"
+                            class="btn btn-outline-warning btn-sm rounded-pill mt-3"
+                            style="border-color: #ff6d00; color: #ff6d00;">
+                            التفاصيل <i class="bi bi-arrow-left-short"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="medina-products py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">
+            <i class="bi bi-basket-fill text-success"></i> سلة خيرات طيبة
+        </h2>
+
+        <div id="medinaCarousel" class="carousel slide custom-carousel shadow-lg" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#medinaCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#medinaCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#medinaCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#medinaCarousel" data-bs-slide-to="3"></button>
+            </div>
+
+            <div class="carousel-inner rounded-4 overflow-hidden">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/ajwa_dates.jpg' %}" class="d-block w-100" alt="تمور العجوة">
+                    <div class="carousel-caption d-none d-md-block border-warning">
+                        <i class="bi bi-tree-fill fs-2"></i>
+                        <h3>تمور العجوة</h3>
+                        <p>سيدة تمور الدنيا، تمتاز بفوائدها الصحية العظيمة ومكانتها الخاصة في قلوب المسلمين.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/medina_mint.jpg' %}" class="d-block w-100" alt="النعناع المديني">
+                    <div class="carousel-caption d-none d-md-block border-success">
+                        <i class="bi bi-flower1 fs-2"></i>
+                        <h3>النعناع والحبق</h3>
+                        <p>الرفيق الدائم لشاي المدينة، يزرع في مزارع "أبيار علي" و"قبا" ويصدر لجميع مناطق المملكة.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/khaybar_dates.jpg' %}" class="d-block w-100" alt="نخيل خيبر">
+                    <div class="carousel-caption d-none d-md-block border-primary">
+                        <i class="bi bi-droplet-fill fs-2"></i>
+                        <h3>محاصيل خيبر</h3>
+                        <p>تعتبر خيبر سلة غذاء المنطقة التاريخية بفضل وفرة عيونها وتربتها البركانية الخصبة.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{% static 'images/ula_citrus.jpg' %}" class="d-block w-100" alt="حمضيات العلا">
+                    <div class="carousel-caption d-none d-md-block" style="border-color: #ff6d00;">
+                        <i class="bi bi-brightness-high fs-2"></i>
+                        <h3>حمضيات العلا</h3>
+                        <p>منتجات طبيعية 100% من قلب الأودية التاريخية، تشمل أجود أنواع الليمون والبرتقال الملكي.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#medinaCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">السابق</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#medinaCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">التالي</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <h2 class="mb-5 text-warning">المدينة الزراعية في أرقام</h2>
+        <div class="row text-center">
+            <div class="col-md-4 border-end border-secondary">
+                <h3 class="display-6 fw-bold">+4M</h3>
+                <p>نخلة في منطقة المدينة</p>
+            </div>
+            <div class="col-md-4 border-end border-secondary">
+                <h3 class="display-6 fw-bold">15</h3>
+                <p>مركزاً لتعبئة وتصدير التمور</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="display-6 fw-bold">#1</h3>
+                <p>عالمياً في إنتاج وتصدير العجوة</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
