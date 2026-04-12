@@ -3,6 +3,7 @@
 
 {% block content %}
 
+
 <section class="p-growth-hero">
     <div class="p-growth-hero-overlay"></div>
     <div class="container p-growth-hero-content text-center">
@@ -13,33 +14,7 @@
     </div>
 </section>
 
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold"><i class="bi bi-intersect text-success"></i> أثر النماء: تحول الأرض</h2>
-            <p class="text-muted">اسحب الشريط لمشاهدة كيف تحولت المناطق الصحراوية إلى واحات خضراء بفضل غراس</p>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-md-10">
-                <div class="p-growth-slider-wrapper shadow-lg rounded-4 overflow-hidden">
-
-                    <div class="p-growth-img-after"></div>
-
-                    <div class="p-growth-img-before"></div>
-
-                    <div class="p-growth-slider-line" id="sliderLine"></div>
-
-                    <input type="range" min="0" max="100" value="50" class="p-growth-range" id="growthSlider" dir="ltr">
-
-                    <div class="p-growth-label left">بعد غراس</div>
-                    <div class="p-growth-label right">قبل غراس</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="py-5 bg-white">
+<section class="bento-section">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold text-success">خارطة نماء غراس</h2>
@@ -80,47 +55,53 @@
 <section class="py-5 bg-white">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold text-success">محاور النماء</h2>
-            <p class="text-muted">كيف نُعيد صياغة المشهد البيئي في المملكة؟</p>
+            <h2 class="fw-bold"><i class="bi bi-intersect text-success"></i> أثر النماء: تحول الأرض</h2>
+            <p class="text-muted">اسحب الشريط لمشاهدة كيف تحولت المناطق الصحراوية إلى واحات خضراء بفضل غراس</p>
         </div>
 
-        <div class="bento-grid">
-            <div class="bento-item bento-main shadow-sm">
-                <div class="bento-overlay">
-                    <span class="badge bg-success mb-2">رؤية 2030</span>
-                    <h3 class="fw-bold">السعودية الخضراء</h3>
-                    <p class="small">نسابق الزمن لزراعة 10 مليار شجرة وحماية 30% من المناطق البرية.</p>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="p-growth-slider-wrapper shadow-lg rounded-4 overflow-hidden">
+
+                    <div class="p-growth-img-after"></div>
+
+                    <div class="p-growth-img-before"></div>
+
+                    <div class="p-growth-slider-line" id="sliderLine"></div>
+
+                    <input type="range" min="0" max="100" value="50" class="p-growth-range" id="growthSlider" dir="ltr">
+
+                    <div class="p-growth-label left">بعد غراس</div>
+                    <div class="p-growth-label right">قبل غراس</div>
                 </div>
-            </div>
-
-            <div class="bento-item bento-tech shadow-sm">
-                <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-robot text-success fs-3 me-2"></i>
-                    <h5 class="fw-bold mb-0">نثر البذور الذكي</h5>
-                </div>
-                <p class="small text-muted">استخدام طائرات الدرون للوصول لقمم الجبال والأودية الوعرة.</p>
-            </div>
-
-            <div class="bento-item bento-tall shadow-sm">
-                <div class="bento-tag">مبادرة مجتمعية</div>
-                <div class="bento-bottom-text">
-                    <h6 class="fw-bold text-white">سواعدنا تزرع</h6>
-                    <p class="small text-white-50">أكثر من 50 ألف متطوع انضموا للرحلة.</p>
-
-                    <a href="#" class="btn bento-btn-sm mt-2">
-                        انضم إلينا <i class="bi bi-arrow-left-short"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div
-                class="bento-item bento-small shadow-sm text-center bg-success text-white d-flex flex-column justify-content-center">
-                <i class="bi bi-shield-check fs-1 mb-2"></i>
-                <h2 class="fw-bold mb-0">100%</h2>
-                <p class="small">بذور محلية أصيلة</p>
             </div>
         </div>
     </div>
 </section>
+<div class="growth-timeline" dir="rtl">
+    <div class="growth-node">
+        <div class="node-icon"><i class="bi bi-flower1"></i></div>
+        <div class="node-content">
+            <h3>5M+</h3>
+            <p>بذرة منثورة</p>
+        </div>
+    </div>
+    
+    <div class="growth-node">
+        <div class="node-icon"><i class="bi bi-tree"></i></div>
+        <div class="node-content">
+            <h3>150K</h3>
+            <p>سواعد متطوعة</p>
+        </div>
+    </div>
+
+    <div class="growth-node">
+        <div class="node-icon"><i class="bi bi-cloud-haze2"></i></div>
+        <div class="node-content">
+            <h3>85M</h3>
+            <p>طن CO2 مخفض</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

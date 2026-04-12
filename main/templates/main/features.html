@@ -151,58 +151,39 @@
 
 </section>
 
-<!-- التثقف -->
-<section class="culture-section py-5">
-    <div class="container text-center">
-        <h2 class="mb-3 fw-bold">
-            <i class="bi bi-sprout"></i> زوايا التثقف
-        </h2>
+<div class="bento-grid">
 
-        <p class="mb-5 text-muted">
-            تعمّق في تاريخ وثقافة الزراعة السعودية عبر محتوى غني وتفاعلي
-        </p>
-
-        <div class="row g-3">
-            <div class="col-6 col-md-3">
-                <a href="{% url 'education' %}" class="culture-link">
-                    <div class="culture-tile">
-                        <i class="bi bi-journal-richtext"></i>
-                        <h6>روايات تاريخية</h6>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <a href="{% url 'education' %}" class="culture-link">
-                    <div class="culture-tile">
-                        <i class="bi bi-film"></i>
-                        <h6>أفلام وثائقية</h6>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <a href="{% url 'education' %}" class="culture-link">
-                    <div class="culture-tile">
-                        <i class="bi bi-diagram-3"></i>
-                        <h6>خرائط ذهنية</h6>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <a href="{% url 'education' %}" class="culture-link">
-                    <div class="culture-tile">
-                        <i class="bi bi-search"></i>
-                        <h6>أبحاث ومقالات</h6>
-                    </div>
-                </a>
-            </div>
+    <!-- 1. الرئيسي (ياخذ 2) -->
+    <div class="bento-item bento-main shadow-sm">
+        <div class="bento-overlay">
+            <span class="badge bg-success mb-2">رؤية 2030</span>
+            <h3 class="fw-bold">السعودية الخضراء</h3>
+            <p class="small">نسابق الزمن لزراعة 10 مليار شجرة.</p>
         </div>
-
-        <a href="{% url 'education' %}" class="culture-btn mt-5 d-inline-block">
-            استكشف قسم التثقف
-        </a>
     </div>
-</section>
+
+    <!-- 2. الطويل -->
+    <div class="bento-item bento-tall shadow-sm">
+        <div class="bento-tag">مبادرة مجتمعية</div>
+        <div class="bento-bottom-text">
+            <h6 class="fw-bold text-white">سواعدنا تزرع</h6>
+            <p class="small text-white-50">أكثر من 50 ألف متطوع</p>
+        </div>
+    </div>
+
+    <!-- 3. التقنية -->
+    <div class="bento-item bento-tech shadow-sm text-center d-flex flex-column justify-content-center">
+        <i class="bi bi-robot text-success fs-2 mb-2"></i>
+        <h6 class="fw-bold">نثر البذور الذكي</h6>
+        <p class="small text-muted">استخدام الدرون</p>
+    </div>
+
+    <!-- 4. الصغير -->
+    <div class="bento-item bento-small shadow-sm text-center bg-success text-white d-flex flex-column justify-content-center">
+        <i class="bi bi-shield-check fs-1 mb-2"></i>
+        <h2 class="fw-bold mb-0">100%</h2>
+        <p class="small">بذور محلية</p>
+    </div>
+
+</div>
 {% endblock %}
