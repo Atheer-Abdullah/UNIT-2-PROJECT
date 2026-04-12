@@ -1,0 +1,174 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">هنا <span class="highlight">غراس</span> المملكة</h1>
+        <h2 class="hero-subtitle">حيث تلتقي عراقة الأرض بطموح الرؤية</h2>
+        <p class="hero-mid">بوابتك الرقمية لاستكشاف الثروة الزراعية السعودية</p>
+        <p class="hero-desc">
+            انطلقت "غراس" لتكون الجسر الذي يربطك بجذورنا الخضراء، محولةً البيانات الجغرافية
+            إلى تجربة حية تروي قصة نماء الإنسان والأرض في مملكتنا الغالية.
+        </p>
+        <a href="{% url 'regions' %}" class="btn btn-success">
+استكشف واحات المملكة 
+</a>
+    </div>
+</section>
+
+<section id="journey" class="how-it-works py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">رحلتك التفاعلية في غراس</h2>
+            <p class="section-sub">نصحبك في جولة تبدأ بالمعرفة، تمر بالتجربة، وتنتهي بالاستدامة</p>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="brief-box">
+                    <div class="icon-wrap"><i class="bi bi-map"></i></div>
+                    <h3>خريطة النماء</h3>
+                    <p>أولى خطواتك تبدأ من الخريطة؛ حيث نكشف لك أسرار كل منطقة وما تجود به أرضها من محاصيل فريدة.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="brief-box active-brief">
+                    <div class="icon-wrap"><i class="bi bi-shield-check"></i></div>
+                    <h3>الإرشاد الرقمي</h3>
+                    <p>بعد الاستكشاف، يأتي دور التعلم؛ نوفر لك مرشداً رقمياً يبسط لك مفاهيم الزراعة المستدامة بوضوح
+                        ومنطق.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="brief-box">
+                    <div class="icon-wrap"><i class="bi bi-graph-up-arrow"></i></div>
+                    <h3>تفاعل حي</h3>
+                    <p>في الختام، أنت جزء من الإنجاز؛ تفاعل مع البيانات الحية وشاهد كيف تساهم هذه المحاصيل في تحقيق رؤية
+                        2030.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features py-5">
+    <div class="container text-center">
+        <h2 class="section-title">حصادنا الوطني <i class="bi bi-flower1 ms-2"></i></h2>
+        <p class="section-sub mb-5">نماذج من الكنوز التي ستتعرف عليها عبر خريطة غراس الذكية</p>
+
+        <div class="row justify-content-center g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <img src="{% static 'images/coffee.jpg' %}" alt="البن" class="img-fluid">
+                    <div class="feature-content">
+                        <h3>أصالة الجبال</h3>
+                        <p>البن الخولاني: إرث الجنوب الذي عانق السحاب وأصبح رمزاً للكرم السعودي.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <img src="{% static 'images/palm.jpg' %}" alt="النخيل" class="img-fluid">
+                    <div class="feature-content">
+                        <h3>رمز الاستدامة</h3>
+                        <p>واحات النخيل: شريان الحياة القديم ومصدر الأمن الغذائي الحديث للعالم أجمع.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <img src="{% static 'images/rose.jpg' %}" alt="الورد" class="img-fluid">
+                    <div class="feature-content">
+                        <h3>عطر الأرض</h3>
+                        <p>الورد الطائفي: قصة عشق بين الندى والجبل، تُصدر عبيرها من الطائف إلى عواصم العطور.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <a href="{% url 'regions' %}" class="btn-main-trip">
+                استكشف كافة المناطق في الواحات
+                <i class="bi bi-arrow-left-short"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="timeline-pro py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="timeline-main-title">رحلة الزراعة في المملكة عبر العصور <i class="bi bi-leaf text-success"></i>
+            </h2>
+            <p class="timeline-subtitle">حكاية بذرة روتها العزيمة، فأثمرت وطناً أخضر</p>
+        </div>
+
+        <div class="timeline-row mb-5 reveal">
+            <div class="timeline-img old-era"></div>
+            <div class="timeline-text">
+                <span class="timeline-date">ما قبل 1953م</span>
+                <h3><i class="bi bi-flower1 icon-gold"></i> عهد الأجداد: جذور الكفاح</h3>
+                <p>حين كانت الزراعة هي شريان الحياة الوحيد، اعتمد أجدادنا على ذكاء "نظم الري التقليدية".</p>
+            </div>
+        </div>
+
+        <div class="timeline-row flex-row-reverse mb-5 reveal">
+            <div class="timeline-img foundation-era"></div>
+            <div class="timeline-text text-end">
+                <span class="timeline-date">1953م</span>
+                <h3><i class="bi bi-building-check icon-gold ms-2"></i> التأسيس المؤسسي: ولادة الوزارة</h3>
+                <p>نقطة التحول الكبرى بصدور الأمر الملكي بتأسيس أول كيان تنظيمي للزراعة.</p>
+            </div>
+        </div>
+
+        <div class="timeline-row mb-5 reveal">
+            <div class="timeline-img green-boom"></div>
+            <div class="timeline-text">
+                <span class="timeline-date">الثمانينات</span>
+                <h3><i class="bi bi-patch-check icon-gold"></i> الطفرة الخضراء: عصر الاكتفاء</h3>
+                <p>سنوات الملحمة الزراعية التي أبهرت العالم؛ حيث تحولت الرمال إلى مزارع قمح شاسعة.</p>
+            </div>
+        </div>
+
+        <div class="timeline-row flex-row-reverse mb-5 reveal">
+            <div class="timeline-img vision-era"></div>
+            <div class="timeline-text text-end">
+                <span class="timeline-date">رؤية 2030</span>
+                <h3><i class="bi bi-globe-asia-australia icon-gold ms-2"></i> حقبة الاستدامة: السعودية الخضراء</h3>
+                <p>التزام وطني بمستقبل بيئي مستدام؛ نزرع 10 مليارات شجرة.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats py-5" id="stats">
+    <div class="container text-center">
+        <h2 class="section-title mb-5">غراسنا في أرقام <i class="bi bi-bar-chart-fill ms-2"></i></h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <div class="stat-icon-top"><i class="bi bi-tree-fill"></i></div>
+                    <h2 class="counter" data-target="34000000">0</h2>
+                    <p>نخلة هي فخر إنتاجنا الوطني</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card featured-stat">
+                    <div class="stat-icon-top"><i class="bi bi-water"></i></div>
+                    <h2 class="counter" data-target="10000000000">0</h2>
+                    <p>هدفنا الأخضر: أشجار تعيد رسم الخارطة</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card">
+                    <div class="stat-icon-top"><i class="bi bi-trophy-fill"></i></div>
+                    <h2 class="counter" data-target="2">0</h2>
+                    <p>ترتيبنا العالمي في إنتاج التمور</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
