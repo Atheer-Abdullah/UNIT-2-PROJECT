@@ -1,0 +1,125 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="regions-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-center">
+        <h1>واحات المملكة</h1>
+        <p>استكشف كنوز المناطق الزراعية في المملكة</p>
+    </div>
+</section>
+
+<section class="regions-grid">
+    <div class="container">
+        <div class="regions-masonry">
+
+            <div class="region-card">
+                <img src="{% static 'images/riyadh.jpg' %}">
+                <div class="overlay">
+                    <h3>الرياض</h3>
+                    <a href="{% url 'region_detail' 'riyadh' %}">للمزيد</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="{% static 'images/jazan.jpg' %}">
+                <div class="overlay">
+                    <h3>جازان</h3>
+                    <a href="{% url 'region_detail' 'jazan' %}">للمزيد</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="{% static 'images/qassim.jpg' %}">
+                <div class="overlay">
+                    <h3>القصيم</h3>
+                    <a href="{% url 'region_detail' 'qassim' %}">للمزيد</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="{% static 'images/mekkah.jpg' %}">
+                <div class="overlay">
+                    <h3>مكة المكرمة</h3>
+                    <a href="{% url 'region_detail' 'mekkah' %}">للمزيد</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="{% static 'images/medina.jpg' %}">
+                <div class="overlay">
+                    <h3>المدينة المنورة</h3>
+                    <a href="{% url 'region_detail' 'medina' %}">للمزيد</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="{% static 'images/eastern.jpg' %}">
+                <div class="overlay">
+                    <h3>المنطقة الشرقية</h3>
+                    <a href="{% url 'region_detail' 'eastern' %}">للمزيد</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="{% static 'images/asir.jpg' %}">
+                <div class="overlay">
+                    <h3>عسير</h3>
+                    <a href="{% url 'region_detail' 'asir' %}">للمزيد</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="{% static 'images/tabuk.jpg' %}">
+                <div class="overlay">
+                    <h3>تبوك</h3>
+                    <a href="{% url 'region_detail' 'tabuk' %}">للمزيد</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="{% static 'images/hail.jpg' %}">
+                <div class="overlay">
+                    <h3>حائل</h3>
+                    <a href="{% url 'region_detail' 'hail' %}">للمزيد</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="{% static 'images/jouf.jpg' %}">
+                <div class="overlay">
+                    <h3>الجوف</h3>
+                    <a href="{% url 'region_detail' 'jouf' %}">للمزيد</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="{% static 'images/najran.jpg' %}">
+                <div class="overlay">
+                    <h3>نجران</h3>
+                    <a href="{% url 'region_detail' 'najran' %}">للمزيد</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="{% static 'images/albaha.jpg' %}">
+                <div class="overlay">
+                    <h3>الباحة</h3>
+                    <a href="{% url 'region_detail' 'albaha' %}">للمزيد</a>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <img src="{% static 'images/northern.jpg' %}">
+                <div class="overlay">
+                    <h3>الحدود الشمالية</h3>
+                    <a href="{% url 'region_detail' 'northern' %}">للمزيد</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
