@@ -11,7 +11,6 @@ body {
     background: #f8fcf5;
     color: #2e2e2e;
     transition: 0.3s;
-    padding-top: 50px;
 }
 
 main {
@@ -40,7 +39,7 @@ body.simple-mode {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 12px 0 !important;
-    min-height: 60px;
+    min-height: 80px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
@@ -106,7 +105,7 @@ body.simple-mode {
 /* Hero Section*/
 .hero {
     height: 90vh;
-    background: url('/static/images/palm-bg.jpg') center/cover no-repeat;
+    background: url('/static/images/Bar-lee.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
@@ -850,6 +849,7 @@ body.simple-mode {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 .slide-1 { background-image: url('/static/images/ai-farm.jpg'); }
@@ -1903,3 +1903,4 @@ body.simple-mode {
     border-radius: 1rem;
     overflow: hidden; 
 }
+
