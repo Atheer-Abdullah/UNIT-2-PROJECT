@@ -15,125 +15,111 @@
     <div class="container">
         <div class="regions-masonry">
 
-            <!-- الرياض -->
             <div class="region-card">
                 <img src="{% static 'images/riyadh.jpg' %}">
                 <div class="overlay">
                     <h3>الرياض</h3>
-                    <a href="{% url 'riyadh' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=riyadh">للمزيد</a>
                 </div>
             </div>
 
-            <!-- جازان -->
             <div class="region-card">
                 <img src="{% static 'images/jazan.jpg' %}">
                 <div class="overlay">
                     <h3>جازان</h3>
-                    <a href="{% url 'jazan' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=jazan">للمزيد</a>
                 </div>
             </div>
 
-            <!-- القصيم -->
             <div class="region-card">
                 <img src="{% static 'images/qassim.jpg' %}">
                 <div class="overlay">
                     <h3>القصيم</h3>
-                    <a href="{% url 'qassim' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=qassim">للمزيد</a>
                 </div>
             </div>
 
-            <!-- مكة -->
             <div class="region-card">
                 <img src="{% static 'images/mekkah.jpg' %}">
                 <div class="overlay">
                     <h3>مكة المكرمة</h3>
-                    <a href="{% url 'makkah' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=makkah">للمزيد</a>
                 </div>
             </div>
 
-            <!-- المدينة -->
             <div class="region-card">
                 <img src="{% static 'images/medina.jpg' %}">
                 <div class="overlay">
                     <h3>المدينة المنورة</h3>
-                    <a href="{% url 'madinah' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=madinah">للمزيد</a>
                 </div>
             </div>
 
-            <!-- الشرقية -->
             <div class="region-card">
                 <img src="{% static 'images/eastern.jpg' %}">
                 <div class="overlay">
                     <h3>المنطقة الشرقية</h3>
-                    <a href="{% url 'eastern' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=eastern">للمزيد</a>
                 </div>
             </div>
 
-            <!-- عسير -->
             <div class="region-card">
                 <img src="{% static 'images/asir.jpg' %}">
                 <div class="overlay">
                     <h3>عسير</h3>
-                    <a href="{% url 'asir' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=asir">للمزيد</a>
                 </div>
             </div>
 
-            <!-- تبوك -->
             <div class="region-card">
                 <img src="{% static 'images/tabuk.jpg' %}">
                 <div class="overlay">
                     <h3>تبوك</h3>
-                    <a href="{% url 'tabuk' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=tabuk">للمزيد</a>
                 </div>
             </div>
 
-            <!-- حائل -->
             <div class="region-card">
                 <img src="{% static 'images/hail.jpg' %}">
                 <div class="overlay">
                     <h3>حائل</h3>
-                    <a href="{% url 'hail' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=hail">للمزيد</a>
                 </div>
             </div>
 
-            <!-- الجوف -->
             <div class="region-card">
                 <img src="{% static 'images/jouf.jpg' %}">
                 <div class="overlay">
                     <h3>الجوف</h3>
-                    <a href="{% url 'al-jouf' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=al_jouf">للمزيد</a>
                 </div>
             </div>
 
-            <!-- نجران -->
             <div class="region-card">
                 <img src="{% static 'images/najran.jpg' %}">
                 <div class="overlay">
                     <h3>نجران</h3>
-                    <a href="{% url 'najran' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=najran">للمزيد</a>
                 </div>
             </div>
 
-            <!-- الباحة -->
             <div class="region-card">
                 <img src="{% static 'images/albaha.jpg' %}">
                 <div class="overlay">
                     <h3>الباحة</h3>
-                    <a href="{% url 'al-baha' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=al_baha">للمزيد</a>
                 </div>
             </div>
 
-            <!-- الحدود الشمالية -->
             <div class="region-card">
                 <img src="{% static 'images/northern.jpg' %}">
                 <div class="overlay">
                     <h3>الحدود الشمالية</h3>
-                    <a href="{% url 'northern-borders' %}">للمزيد</a>
+                    <a href="{% url 'region_detail' %}?name=northern_borders">للمزيد</a>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
-
 {% endblock %}

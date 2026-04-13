@@ -1,6 +1,5 @@
-/* ============================= */
-/* 🌙 DARK MODE + INIT FUNCTION */
-/* ============================= */
+/* DARK MODE + INIT FUNCTION */
+
 
 function initTheme() {
     const htmlElement = document.documentElement;
@@ -34,17 +33,14 @@ function initTheme() {
 }
 
 
-/* ============================= */
-/* 🚀 MAIN LOAD */
-/* ============================= */
+/* MAIN LOAD */
 
 document.addEventListener("DOMContentLoaded", function () {
 
     initTheme();
 
-    /* ============================= */
-    /* 🎞️ CAROUSEL */
-    /* ============================= */
+
+    /* CAROUSEL */
     const jazanCarousel = document.querySelector('#jazanCarousel');
     if (jazanCarousel) {
         new bootstrap.Carousel(jazanCarousel, {
@@ -54,9 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    /* ============================= */
-    /* 🔢 COUNTER */
-    /* ============================= */
+    /* COUNTER */
     const counters = document.querySelectorAll('.counter, [id^="count"]');
     let started = false;
 
@@ -97,9 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    /* ============================= */
-    /* 🖼️ BEFORE / AFTER SLIDER */
-    /* ============================= */
+
+    /* BEFORE / AFTER SLIDER */
     const slider = document.getElementById('growthSlider');
     const beforeImg = document.querySelector('.p-growth-img-before');
     const beforeText = document.querySelector('.before-text');
@@ -119,9 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    /* ============================= */
-    /* ✨ ANIMATIONS */
-    /* ============================= */
+    /* ANIMATIONS */
     const scrollItems = document.querySelectorAll('.bento-item, .nema-item-wrapper, .timeline-row, .p-growth-timeline-item, .reveal');
 
     const observer = new IntersectionObserver((entries) => {
@@ -143,9 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(item);
     });
 
-    /* ============================= */
-    /* 🗺️ MAP */
-    /* ============================= */
+    /* MAP */
     const mapElement = document.getElementById("map");
 
     if (mapElement) {
@@ -161,11 +150,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         L.imageOverlay(imageUrl, imageBounds, { opacity: 0.6 }).addTo(map);
 
-        const locations = [
-            { pos: [24.7136, 46.6753], text: "منطقة الرياض", url: "/regions/riyadh/" },
-            { pos: [21.4858, 39.1925], text: "منطقة مكة", url: "/regions/makkah/" },
-            { pos: [16.8892, 42.5511], text: "جازان", url: "/regions/jazan/" }
-        ];
+const locations = [
+    { pos: [24.7136, 46.6753], text: "منطقة الرياض", url: "/regions/details/?name=riyadh" },
+    { pos: [21.4858, 39.1925], text: "منطقة مكة المكرمة", url: "/regions/details/?name=makkah" },
+    { pos: [24.4673, 39.6111], text: "منطقة المدينة المنورة", url: "/regions/details/?name=madinah" },
+    { pos: [26.2172, 50.1971], text: "المنطقة الشرقية", url: "/regions/details/?name=eastern" },
+    { pos: [26.3167, 43.9667], text: "منطقة القصيم", url: "/regions/details/?name=qassim" },
+    { pos: [16.8892, 42.5511], text: "منطقة جازان", url: "/regions/details/?name=jazan" },
+    { pos: [18.2164, 42.5053], text: "منطقة عسير", url: "/regions/details/?name=asir" },
+    { pos: [28.3833, 36.5667], text: "منطقة تبوك", url: "/regions/details/?name=tabuk" },
+    { pos: [27.5167, 41.6833], text: "منطقة حائل", url: "/regions/details/?name=hail" },
+    { pos: [20.0125, 41.4653], text: "منطقة الباحة", url: "/regions/details/?name=baha" },
+    { pos: [30.0000, 40.0000], text: "منطقة الجوف", url: "/regions/details/?name=jouf" },
+    { pos: [30.0000, 42.5000], text: "منطقة الحدود الشمالية", url: "/regions/details/?name=northern" },
+    { pos: [17.4917, 44.1322], text: "منطقة نجران", url: "/regions/details/?name=najran" }
+];
 
         locations.forEach(loc => {
             const marker = L.marker(loc.pos).addTo(map);

@@ -4,35 +4,45 @@
 {% block content %}
 <section class="education-hero py-5 mt-5">
     <div class="container text-center">
-        <h1 class="display-4 fw-bold mb-3">خريطة <span class="highlight">الزراعة</span></h1>
-        <p class="lead section-sub">اضغط على أي منطقة لاستكشاف كنوزها الزراعية</p>
-        <div class="divider mx-auto"></div>
+        <h1 class="display-4 fw-bold mb-3">خريطة <span class="highlight text-success">الزراعة</span> التفاعلية</h1>
+        <p class="lead section-sub text-muted">اضغط على أي منطقة لاستكشاف كنوزها الزراعية ومشاريع "غراس" فيها</p>
+        <div class="divider mx-auto bg-success" style="height: 4px; width: 60px;"></div>
     </div>
 </section>
 
 <section class="container pb-5">
-    <div class="map-wrapper shadow-lg rounded-4 overflow-hidden bg-white p-2">
-        <img src="{% static 'images/ksa-map.svg' %}" usemap="#saudi-map" class="img-fluid w-100" >
+    <div class="row justify-content-center">
+        <div class="col-md-9 col-lg-8"> 
+            <div class="map-wrapper shadow-lg rounded-4 overflow-hidden bg-white p-3 border">
+                
+                <img src="{% static 'images/ksa-map.svg' %}" usemap="#saudi-map" class="img-fluid w-100" id="ksaMap">
 
-        <map name="saudi-map">
-            <area shape="poly" coords="480,450,620,450,620,600,480,600" alt="الرياض" href="{% url 'riyadh' %}">
-            <area shape="circle" coords="450,350,40" alt="القصيم" href="{% url 'qassim' %}">
-            
-            <area shape="circle" coords="280,550,50" alt="مكة المكرمة" href="{% url 'makkah' %}">
-            <area shape="circle" coords="290,430,45" alt="المدينة المنورة" href="{% url 'madinah' %}">
-            
-            <area shape="poly" coords="200,200,350,250,350,350,200,300" alt="تبوك" href="{% url 'tabuk' %}">
-            <area shape="circle" coords="380,300,40" alt="حائل" href="{% url 'hail' %}">
-            <area shape="poly" coords="300,100,500,150,550,250,400,200" alt="الحدود الشمالية" href="{% url 'northern-borders' %}">
-            <area shape="circle" coords="250,220,35" alt="الجوف" href="{% url 'al-jouf' %}">
+                <map name="saudi-map">
+                    <area shape="poly" coords="480,450,620,450,620,600,480,600" alt="الرياض" href="{% url 'region_detail' %}?name=riyadh">
+                    <area shape="poly" coords="280,480,380,480,380,580,280,580" alt="مكة المكرمة" href="{% url 'region_detail' %}?name=makkah">
+                    <area shape="poly" coords="250,300,350,300,350,450,250,450" alt="المدينة المنورة" href="{% url 'region_detail' %}?name=madinah">
+                    <area shape="circle" coords="450,350,45" alt="القصيم" href="{% url 'region_detail' %}?name=qassim">
+                    <area shape="poly" coords="580,250,750,250,750,550,580,550" alt="المنطقة الشرقية" href="{% url 'region_detail' %}?name=eastern">
+                    <area shape="poly" coords="350,600,450,600,450,680,350,680" alt="عسير" href="{% url 'region_detail' %}?name=asir">
+                    <area shape="poly" coords="150,150,300,150,300,320,150,320" alt="تبوك" href="{% url 'region_detail' %}?name=tabuk">
+                    <area shape="poly" coords="320,220,450,220,450,320,320,320" alt="حائل" href="{% url 'region_detail' %}?name=hail">
+                    <area shape="poly" coords="380,100,600,100,600,200,380,200" alt="الحدود الشمالية" href="{% url 'region_detail' %}?name=northern">
+                    <area shape="poly" coords="370,690,440,690,440,750,370,750" alt="جازان" href="{% url 'region_detail' %}?name=jazan">
+                    <area shape="poly" coords="460,630,580,630,580,720,460,720" alt="نجران" href="{% url 'region_detail' %}?name=najran">
+                    <area shape="circle" coords="340,580,30" alt="الباحة" href="{% url 'region_detail' %}?name=baha">
+                    <area shape="poly" coords="280,150,380,150,380,250,280,250" alt="الجوف" href="{% url 'region_detail' %}?name=jouf">
+                </map>
 
-            <area shape="poly" coords="630,350,850,450,850,700,630,700" alt="المنطقة الشرقية" href="{% url 'eastern' %}">
-
-            <area shape="circle" coords="380,750,40" alt="عسير" href="{% url 'asir' %}">
-            <area shape="circle" coords="330,830,30" alt="جازان" href="{% url 'jazan' %}">
-            <area shape="circle" coords="450,820,35" alt="نجران" href="{% url 'najran' %}">
-            <area shape="circle" coords="320,720,30" alt="الباحة" href="{% url 'al-baha' %}">
-        </map>
+            </div>
+        </div>
     </div>
 </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        imageMapResize();
+    });
+</script>
 {% endblock %}

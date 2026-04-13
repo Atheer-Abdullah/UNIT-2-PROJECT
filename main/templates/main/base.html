@@ -46,6 +46,7 @@
                 <li class="nav-item"><a class="nav-link" href="/contact/">تواصل معنا</a></li>
             </ul>
 
+
             <div class="navbar-nav ms-lg-auto">
                 <button class="btn theme-btn nav-link border-0" id="themeToggler" title="تبديل الوضع">
                     <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
@@ -62,8 +63,6 @@
 <footer class="main-footer py-5 mt-5 border-top">
     <div class="container">
         <div class="row text-center text-md-end">
-
-            
             <div class="col-md-4 mb-4">
                 <h3 class="footer-logo mb-3">
                     <i class="bi bi-tree-fill text-success"></i> غراس
@@ -73,7 +72,6 @@
                 </p>
             </div>
 
-            
             <div class="col-md-4 mb-4 text-center">
                 <h4 class="fw-bold">روابط سريعة</h4>
                 <ul class="footer-links list-unstyled mt-3">
@@ -84,7 +82,6 @@
                 </ul>
             </div>
 
-            
             <div class="col-md-4 mb-4 text-md-start">
                 <h4 class="fw-bold">تابعنا</h4>
                 <div class="social-icons fs-4 mt-3">
@@ -93,14 +90,43 @@
                     <a href="https://x.com/athee_cs?s=21" class="text-success"><i class="bi bi-twitter-x"></i></a>
                 </div>
             </div>
-
         </div>
 
         <hr class="my-4">
 
-        <p class="text-center footer-copy text-light mb-0 small">
+        <p class="text-center footer-copy text-light mb-1 small">
             © 2026 غراس - جميع الحقوق محفوظة لآمالنا الخضراء
         </p>
+
+        <div class="user-info text-center">
+            {% if request.COOKIES.is_visitor %}
+                <span class="text-success-light d-block small" style="font-size: 0.8rem; opacity: 0.8;">
+                    مرحباً بك مجدداً في غراس!
+                </span>
+            {% endif %}
+
+            {% if last_visited %}
+    <small class="text-light d-block" style="font-size: 0.7rem;">
+        آخر منطقة تصفحتها: 
+        <span class="text-success">
+            {% if last_visited == 'riyadh' %} الرياض
+            {% elif last_visited == 'makkah' %} مكة المكرمة
+            {% elif last_visited == 'madinah' %} المدينة المنورة
+            {% elif last_visited == 'qassim' %} القصيم
+            {% elif last_visited == 'jazan' %} جازان
+            {% elif last_visited == 'asir' %} عسير
+            {% elif last_visited == 'tabuk' %} تبوك
+            {% elif last_visited == 'hail' %} حائل
+            {% elif last_visited == 'jouf' %} الجوف
+            {% elif last_visited == 'baha' %} الباحة
+            {% elif last_visited == 'najran' %} نجران
+            {% elif last_visited == 'eastern' %} المنطقة الشرقية
+            {% elif last_visited == 'northern' %} الحدود الشمالية
+            {% else %} {{ last_visited }} {% endif %}
+        </span>
+    </small>
+{% endif %}
+        </div>
     </div>
 </footer>
 
