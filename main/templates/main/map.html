@@ -2,125 +2,37 @@
 {% load static %}
 
 {% block content %}
-
-<section class="p-growth-hero">
-    <div class="p-growth-hero-overlay"></div>
-    <div class="container p-growth-hero-content text-center">
-        <h1 class="display-3 fw-bold animate__animated animate__fadeInDown">رحلة النماء</h1>
-        <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
-            توثيق لمسيرة مبادرة "غراس" في تخضير أرض المملكة وتحقيق مستهدفات السعودية الخضراء
-        </p>
+<section class="education-hero py-5 mt-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3">خريطة <span class="highlight">الزراعة</span></h1>
+        <p class="lead section-sub">اضغط على أي منطقة لاستكشاف كنوزها الزراعية</p>
+        <div class="divider mx-auto"></div>
     </div>
 </section>
 
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold"><i class="bi bi-intersect text-success"></i> أثر النماء: تحول الأرض</h2>
-            <p class="text-muted">اسحب الشريط لمشاهدة كيف تحولت المناطق الصحراوية إلى واحات خضراء بفضل غراس</p>
-        </div>
+<section class="container pb-5">
+    <div class="map-wrapper shadow-lg rounded-4 overflow-hidden bg-white p-2">
+        <img src="{% static 'images/ksa-map.svg' %}" usemap="#saudi-map" class="img-fluid w-100" >
 
-        <div class="row justify-content-center">
-            <div class="col-md-10">
-                <div class="p-growth-slider-wrapper shadow-lg rounded-4 overflow-hidden">
+        <map name="saudi-map">
+            <area shape="poly" coords="480,450,620,450,620,600,480,600" alt="الرياض" href="{% url 'riyadh' %}">
+            <area shape="circle" coords="450,350,40" alt="القصيم" href="{% url 'qassim' %}">
+            
+            <area shape="circle" coords="280,550,50" alt="مكة المكرمة" href="{% url 'makkah' %}">
+            <area shape="circle" coords="290,430,45" alt="المدينة المنورة" href="{% url 'madinah' %}">
+            
+            <area shape="poly" coords="200,200,350,250,350,350,200,300" alt="تبوك" href="{% url 'tabuk' %}">
+            <area shape="circle" coords="380,300,40" alt="حائل" href="{% url 'hail' %}">
+            <area shape="poly" coords="300,100,500,150,550,250,400,200" alt="الحدود الشمالية" href="{% url 'northern-borders' %}">
+            <area shape="circle" coords="250,220,35" alt="الجوف" href="{% url 'al-jouf' %}">
 
-                    <div class="p-growth-img-after"></div>
+            <area shape="poly" coords="630,350,850,450,850,700,630,700" alt="المنطقة الشرقية" href="{% url 'eastern' %}">
 
-                    <div class="p-growth-img-before"></div>
-
-                    <div class="p-growth-slider-line" id="sliderLine"></div>
-
-                    <input type="range" min="0" max="100" value="50" class="p-growth-range" id="growthSlider" dir="ltr">
-
-                    <div class="p-growth-label left">بعد غراس</div>
-                    <div class="p-growth-label right">قبل غراس</div>
-                </div>
-            </div>
-        </div>
+            <area shape="circle" coords="380,750,40" alt="عسير" href="{% url 'asir' %}">
+            <area shape="circle" coords="330,830,30" alt="جازان" href="{% url 'jazan' %}">
+            <area shape="circle" coords="450,820,35" alt="نجران" href="{% url 'najran' %}">
+            <area shape="circle" coords="320,720,30" alt="الباحة" href="{% url 'al-baha' %}">
+        </map>
     </div>
 </section>
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-success">خارطة نماء غراس</h2>
-            <p class="text-muted">استكشف أثر المبادرة في مختلف مناطق المملكة عبر النقاط الحية</p>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="nema-card">
-                    <div class="nema-icon"><i class="bi bi-cpu"></i></div>
-                    <h4>الزراعة الذكية</h4>
-                    <p>استخدام الدرونز لنثر 5 ملايين بذرة في المناطق الوعرة خلال عام واحد.</p>
-                    <div class="nema-badge">تم الإنجاز</div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="nema-card featured">
-                    <div class="nema-icon"><i class="bi bi-droplet-half"></i></div>
-                    <h4>الري المستدام</h4>
-                    <p>اعتماد 100% على مياه الصرف المعالجة لخدمة الحزام الأخضر حول المدن.</p>
-                    <div class="nema-badge">قيد التوسع</div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="nema-card">
-                    <div class="nema-icon"><i class="bi bi-people"></i></div>
-                    <h4>المشاركة المجتمعية</h4>
-                    <p>تفعيل أكثر من 150 ألف متطوع في حملات التشجير الموسمية.</p>
-                    <div class="nema-badge">مبادرة نشطة</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="py-5 bg-white">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold text-success">محاور النماء</h2>
-            <p class="text-muted">كيف نُعيد صياغة المشهد البيئي في المملكة؟</p>
-        </div>
-
-        <div class="bento-grid">
-            <div class="bento-item bento-main shadow-sm">
-                <div class="bento-overlay">
-                    <span class="badge bg-success mb-2">رؤية 2030</span>
-                    <h3 class="fw-bold">السعودية الخضراء</h3>
-                    <p class="small">نسابق الزمن لزراعة 10 مليار شجرة وحماية 30% من المناطق البرية.</p>
-                </div>
-            </div>
-
-            <div class="bento-item bento-tech shadow-sm">
-                <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-robot text-success fs-3 me-2"></i>
-                    <h5 class="fw-bold mb-0">نثر البذور الذكي</h5>
-                </div>
-                <p class="small text-muted">استخدام طائرات الدرون للوصول لقمم الجبال والأودية الوعرة.</p>
-            </div>
-
-            <div class="bento-item bento-tall shadow-sm">
-                <div class="bento-tag">مبادرة مجتمعية</div>
-                <div class="bento-bottom-text">
-                    <h6 class="fw-bold text-white">سواعدنا تزرع</h6>
-                    <p class="small text-white-50">أكثر من 50 ألف متطوع انضموا للرحلة.</p>
-
-                    <a href="#" class="btn bento-btn-sm mt-2">
-                        انضم إلينا <i class="bi bi-arrow-left-short"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div
-                class="bento-item bento-small shadow-sm text-center bg-success text-white d-flex flex-column justify-content-center">
-                <i class="bi bi-shield-check fs-1 mb-2"></i>
-                <h2 class="fw-bold mb-0">100%</h2>
-                <p class="small">بذور محلية أصيلة</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 {% endblock %}

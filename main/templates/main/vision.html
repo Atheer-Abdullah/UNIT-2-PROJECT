@@ -1,54 +1,67 @@
 {% extends "main/base.html" %}
 {% load static %}
 
-{% block content %}
+{% block title %}رؤيتنا للمستقبل{% endblock %}
 
-<section class="vision-hero">
+{% block content %}
+<section class="vision-hero py-5 mt-5">
     <div class="container text-center">
-        <h1 class="display-3 fw-bold mb-3">رؤيتنا للمستقبل</h1>
-        <p class="lead fs-4">نحو نهضة زراعية تقنية تُحيي الأرض وتُنمي الإنسان</p>
+        <h1 class="display-4 fw-bold mb-3">رؤيتنا <span class="highlight">للمستقبل</span></h1>
+        <p class="lead section-sub">نحو نهضة زراعية تقنية تُحيي الأرض وتُنمي الإنسان</p>
+        <div class="divider mx-auto"></div>
     </div>
 </section>
 
-<section class="py-5" style="margin-bottom: 80px;">
+<section class="edu-content pb-5">
     <div class="container">
-        <div class="row g-4 mt-n5">
+        <div class="row g-4">
             <div class="col-md-4">
-                <div class="pillar-card shadow-sm p-4 text-center rounded-4 h-100">
-                    <div class="icon-box mb-3"><i class="bi bi-eye fs-1 text-success"></i></div>
-                    <h3 class="h4">الرؤية</h3>
-                    <p class="text-muted">أن نصبح المنصة الرقمية الرائدة في توثيق وتعزيز الثروة الزراعية السعودية محلياً وعالمياً.</p>
+                <div class="premium-tool-card text-center p-4 h-100">
+                    <div class="icon-box mb-3 fs-1 text-success">
+                        <i class="bi bi-eye"></i>
+                    </div>
+                    <h4>الرؤية</h4>
+                    <p>أن نصبح المنصة الرقمية الرائدة في توثيق وتعزيز الثروة الزراعية السعودية محلياً وعالمياً.</p>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="pillar-card shadow-sm p-4 text-center rounded-4 h-100">
-                    <div class="icon-box mb-3"><i class="bi bi-rocket-takeoff fs-1 text-success"></i></div>
-                    <h3 class="h4">الرسالة</h3>
-                    <p class="text-muted">تمكين المجتمع من استكشاف كنوزنا الخضراء عبر تجربة تقنية تفاعلية تدمج الأصالة بالابتكار.</p>
+                <div class="premium-tool-card text-center p-4 h-100">
+                    <div class="icon-box mb-3 fs-1 text-success">
+                        <i class="bi bi-rocket-takeoff"></i>
+                    </div>
+                    <h4>الرسالة</h4>
+                    <p>تمكين المجتمع من استكشاف كنوزنا الخضراء عبر تجربة تقنية تفاعلية تدمج الأصالة بالابتكار.</p>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="pillar-card shadow-sm p-4 text-center rounded-4 h-100">
-                    <div class="icon-box mb-3"><i class="bi bi-heart fs-1 text-success"></i></div>
-                    <h3 class="h4">القيم</h3>
-                    <p class="text-muted">الاستدامة، الابتكار، الأصالة، والشفافية في تقديم المعلومة الزراعية.</p>
+                <div class="premium-tool-card text-center p-4 h-100">
+                    <div class="icon-box mb-3 fs-1 text-success">
+                        <i class="bi bi-heart"></i>
+                    </div>
+                    <h4>القيم</h4>
+                    <p>الاستدامة، الابتكار، الأصالة، والشفافية في تقديم المعلومة الزراعية الموثوقة.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="container mb-5">
-    <div class="vision-2030-section shadow-sm">
-        <div class="row align-items-center text-center text-md-end">
-            <div class="col-md-8">
+<section class="explore-more py-5 bg-gradient-premium">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8 p-4">
                 <h2 class="fw-bold mb-4">غراس ورؤية السعودية 2030</h2>
-                <p class="text-secondary fs-5 lh-lg">
-                    يسهم مشروع **"غراس"** بشكل مباشر في تحقيق تطلعات المملكة نحو مجتمع حيوي واقتصاد مزدهر. نحن نركز على دعم "مبادرة السعودية الخضراء" عبر نشر الوعي الزراعي الرقمي، وتطوير السياحة الريفية في مناطق مثل عسير والباحة، مما يعزز من جودة الحياة ويحافظ على الموارد الطبيعية للأجيال القادمة.
+                <p class="fs-5 lh-lg">
+                    يسهم مشروع <strong>"غراس"</strong> بشكل مباشر في تحقيق تطلعات المملكة نحو مجتمع حيوي واقتصاد مزدهر. نحن نركز على دعم "مبادرة السعودية الخضراء" عبر نشر الوعي الزراعي الرقمي، وتطوير السياحة الريفية، مما يعزز من جودة الحياة ويحافظ على الموارد الطبيعية للأجيال القادمة.
                 </p>
             </div>
             <div class="col-md-4 text-center">
-                <img src="https://vision2030.gov.sa/media/rc0bc152/vision-2030-logo.png" alt="Vision 2030" style="max-width: 200px;" class="img-fluid">
+                <img src="{% static 'images/vision-2030-logo.jpg' %}" 
+     alt="Vision 2030" 
+     style="max-width: 500px;" 
+     class="img-fluid border border-2 border-success p-2 rounded-4">
             </div>
         </div>
     </div>
@@ -59,19 +72,19 @@
         <h2 class="fw-bold mb-5">أهدافنا بالأرقام</h2>
         <div class="row g-4">
             <div class="col-md-3">
-                <div class="stat-circle fs-3">13</div>
+                <div class="stat-circle fs-3 mx-auto mb-3">13</div>
                 <h6>منطقة زراعية مغطاة</h6>
             </div>
             <div class="col-md-3">
-                <div class="stat-circle fs-3">100%</div>
+                <div class="stat-circle fs-3 mx-auto mb-3">100%</div>
                 <h6>دقة بيانات المحاصيل</h6>
             </div>
             <div class="col-md-3">
-                <div class="stat-circle fs-3">AR</div>
+                <div class="stat-circle fs-3 mx-auto mb-3">AR</div>
                 <h6>واقع معزز متكامل</h6>
             </div>
             <div class="col-md-3">
-                <div class="stat-circle fs-3">AI</div>
+                <div class="stat-circle fs-3 mx-auto mb-3">AI</div>
                 <h6>ذكاء اصطناعي خبير</h6>
             </div>
         </div>
@@ -81,9 +94,8 @@
 <section class="py-5 bg-success text-white text-center mt-5" style="border-radius: 50px 50px 0 0;">
     <div class="container">
         <h2 class="mb-4">كن جزءاً من حكايتنا</h2>
-        <p class="mb-4">انضم إلى مجتمع غراس وشاركنا في رحلة النماء</p>
+        <p class="mb-4 fs-5">انضم إلى مجتمع غراس وشاركنا في رحلة النماء</p>
         <a href="{% url 'contact' %}" class="btn btn-light btn-lg rounded-pill px-5 fw-bold text-success">تواصل معنا</a>
     </div>
 </section>
-
 {% endblock %}

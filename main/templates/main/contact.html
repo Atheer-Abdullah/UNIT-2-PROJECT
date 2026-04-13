@@ -1,0 +1,93 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}تواصل معنا{% endblock %}
+
+{% block content %}
+<section class="education-hero py-5 mt-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3">تواصل <span class="highlight">معنا</span></h1>
+        <p class="lead section-sub">يسعدنا سماع مقترحاتك أو الإجابة على استفساراتك حول القطاع الزراعي</p>
+        <div class="divider mx-auto"></div>
+    </div>
+</section>
+
+<section class="edu-content pb-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="premium-tool-card text-center p-4 h-100">
+                    <div class="icon-box mb-3 fs-1 text-success mx-auto">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <h4>الموقع</h4>
+                    <p>الرياض، المملكة العربية السعودية</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="premium-tool-card text-center p-4 h-100">
+                    <div class="icon-box mb-3 fs-1 text-success mx-auto">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+                    <h4>البريد الإلكتروني</h4>
+                    <p>info@ghiras.sa</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="premium-tool-card text-center p-4 h-100">
+                    <div class="icon-box mb-3 fs-1 text-success mx-auto">
+                        <i class="bi bi-telephone"></i>
+                    </div>
+                    <h4>الهاتف</h4>
+                    <p>+966 500 000 000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="explore-more py-5 bg-gradient-premium">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="map-wrapper rounded-4 shadow overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463879.41299281!2d46.48363413201923!3d24.72519183651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d8741bb%3A0x14611cab49e0c600!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1700000000000"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="col-md-6 p-4">
+                <div class="bg-white p-4 rounded-4 shadow-sm">
+                    <h2 class="mb-4 text-dark fw-bold">أرسل لنا رسالة</h2>
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control premium-input shadow-sm" placeholder="الاسم الكامل">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control premium-input shadow-sm" placeholder="البريد الإلكتروني">
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control premium-input shadow-sm" placeholder="الموضوع">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control premium-input shadow-sm" rows="4" placeholder="اكتب رسالتك هنا..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success btn-lg rounded-pill px-5 fw-bold w-100">
+                                    إرسال الرسالة <i class="bi bi-send ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

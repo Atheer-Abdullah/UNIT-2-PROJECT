@@ -1,6 +1,3 @@
-/* ==========================================================================
-   1.(General Styles)
-   ========================================================================== */
 * {
     font-family: 'Tajawal', sans-serif !important;
 }
@@ -12,7 +9,6 @@ body {
     margin: 0;
     font-family: 'Tajawal', sans-serif;
     background: #f8fcf5;
-    /* تغيير مميز للطابع الزراعي */
     color: #2e2e2e;
     transition: 0.3s;
     padding-top: 50px;
@@ -28,24 +24,19 @@ main {
     margin: 0 auto;
 }
 
-/* Dark Mode */
 .dark-mode,
 [data-bs-theme="dark"] body {
     background: #1b1b1b !important;
     color: white !important;
 }
 
-/* Simple Mode Additions */
 body.simple-mode {
     font-family: Arial;
 }
 
-/* ==========================================================================
-   2. (Navbar)
-   ========================================================================== */
+/* Navbar Section */
 .premium-navbar {
     background: rgba(15, 30, 20, 0.95) !important;
-    /* Deep modern forest color instead of muddy olive */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 12px 0 !important;
@@ -83,7 +74,6 @@ body.simple-mode {
 .nav-link:hover::after {
     width: 100%;
 }
-/* by atheer */
 
 .theme-btn {
     color: #FFF6E6 !important;
@@ -93,13 +83,13 @@ body.simple-mode {
     transition: all 0.3s ease;
 }
 
-/* تأثير hover */
 .theme-btn:hover {
     color: #8bc34a !important;
     background: rgba(139, 195, 74, 0.15);
     box-shadow: 0 0 12px rgba(139, 195, 74, 0.5);
     transform: scale(1.1);
 }
+
 .mode-btn {
     background: rgba(255, 255, 255, 0.2);
     border: none;
@@ -113,9 +103,7 @@ body.simple-mode {
     transform: scale(1.1);
 }
 
-/* ==========================================================================
-   3.(Hero Section)
-   ========================================================================== */
+/* Hero Section*/
 .hero {
     height: 90vh;
     background: url('/static/images/palm-bg.jpg') center/cover no-repeat;
@@ -156,7 +144,6 @@ body.simple-mode {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
-    /* Text shadow breaks background-clip */
     display: inline-block;
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
 }
@@ -201,7 +188,6 @@ body.simple-mode {
     box-shadow: 0 12px 25px rgba(139, 195, 74, 0.6);
 }
 
-/* Simple Hero Additions */
 .hero.simple-hero {
     background: linear-gradient(120deg, #31c6b4, #491376);
 }
@@ -220,9 +206,7 @@ body.simple-mode {
     border-radius: 8px;
 }
 
-/* ==========================================================================
-   4. (Features Section)
-   ========================================================================== */
+/* Features Section */
 .features {
     padding: 80px 0;
     background: transparent !important;
@@ -317,9 +301,7 @@ body.simple-mode {
     border-radius: 10px;
 }
 
-/* ==========================================================================
-   5. (KSA Map)
-   ========================================================================== */
+/* KSA Map Section */
 .ksa-map {
     text-align: center;
     padding: 80px 0;
@@ -339,74 +321,21 @@ body.simple-mode {
     transform: scale(1.2);
 }
 
-.riyadh {
-    top: 45%;
-    left: 55%;
-}
+.riyadh { top: 45%; left: 55%; }
+.makkah { top: 60%; left: 40%; }
+.madinah { top: 50%; left: 35%; }
+.qassim { top: 40%; left: 50%; }
+.hail { top: 35%; left: 45%; }
+.tabuk { top: 30%; left: 30%; }
+.jawf { top: 20%; left: 45%; }
+.northern { top: 15%; left: 55%; }
+.eastern { top: 45%; left: 75%; }
+.asir { top: 70%; left: 50%; }
+.jazan { top: 85%; left: 45%; }
+.najran { top: 80%; left: 65%; }
+.baha { top: 65%; left: 45%; }
 
-.makkah {
-    top: 60%;
-    left: 40%;
-}
-
-.madinah {
-    top: 50%;
-    left: 35%;
-}
-
-.qassim {
-    top: 40%;
-    left: 50%;
-}
-
-.hail {
-    top: 35%;
-    left: 45%;
-}
-
-.tabuk {
-    top: 30%;
-    left: 30%;
-}
-
-.jawf {
-    top: 20%;
-    left: 45%;
-}
-
-.northern {
-    top: 15%;
-    left: 55%;
-}
-
-.eastern {
-    top: 45%;
-    left: 75%;
-}
-
-.asir {
-    top: 70%;
-    left: 50%;
-}
-
-.jazan {
-    top: 85%;
-    left: 45%;
-}
-
-.najran {
-    top: 80%;
-    left: 65%;
-}
-
-.baha {
-    top: 65%;
-    left: 45%;
-}
-
-/* ==========================================================================
-   6.(How It Works)
-   ========================================================================== */
+/* How It Works Section */
 .how-it-works {
     padding: 80px 0;
     background-color: #FFF6E6;
@@ -480,9 +409,7 @@ body.simple-mode {
     color: white;
 }
 
-/* ==========================================================================
-   7.(Stats Section)
-   ========================================================================== */
+/* Stats Section */
 .stats {
     padding: 80px 0;
     background: linear-gradient(135deg, rgba(139, 195, 74, 0.05), rgba(74, 44, 24, 0.05));
@@ -536,10 +463,29 @@ body.simple-mode {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+.custom-carousel {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-/* ==========================================================================
-   8.(Agri Features)
-   ========================================================================== */
+.carousel-item img {
+    height: 550px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+    filter: invert(0);
+}
+
+/*Agri Features Section */
 .agri-features {
     background: #f3eee4;
     padding: 100px 0;
@@ -585,17 +531,23 @@ body.simple-mode {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-/* ==========================================================================
-   9.(Map Card Section)
-   ========================================================================== */
+
 .map-card {
     background: #fff;
     border-radius: 25px;
     border: 3px solid #8b6b3e;
-    padding: 25px;
-    width: 50%;
-    max-width: 450px;
-    margin: auto;
+    padding: 20px;
+    width: 70%;         
+    max-width: 380px;    
+    
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+#map {
+    width: 100%;
+    height: 300px;       
+    border-radius: 15px;
 }
 
 .map-hero {
@@ -607,14 +559,17 @@ body.simple-mode {
 }
 
 .map-container {
+    position: relative;
     width: 100%;
-    max-width: 900px;
-    margin: auto;
+    overflow: hidden;
 }
 
 .map-img {
-    width: 100%;
-    height: auto;
+    width: 100%;           
+    max-width: 500px;     
+    height: auto; 
+    margin: 0 auto;       
+    display: block;   
 }
 
 .map-title {
@@ -631,9 +586,16 @@ body.simple-mode {
     margin-bottom: 40px;
 }
 
-/* ==========================================================================
-   10.(Agri Journey)
-   ========================================================================== */
+@media (max-width: 768px) {
+    .map-card {
+        width: 95%;      
+        padding: 10px;
+    }
+    #map {
+        height: 350px;   
+    }
+}
+/* Agri Journey Section */
 .agri-journey {
     background: #f8f4ec;
     padding: 100px 0;
@@ -668,9 +630,7 @@ body.simple-mode {
     border: 2px solid #8b6b3e;
 }
 
-/* ==========================================================================
-   11.(Timeline Section)
-   ========================================================================== */
+/* Timeline Section */
 .timeline-pro {
     position: relative;
     padding: 100px 0;
@@ -780,21 +740,10 @@ body.simple-mode {
     transform: scale(1.03);
 }
 
-.old-era {
-    background-image: url('../images/old-farm.jpg');
-}
-
-.foundation-era {
-    background-image: url('../images/ministry.jpg');
-}
-
-.green-boom {
-    background-image: url('../images/agriculture-modern.jpg');
-}
-
-.vision-era {
-    background-image: url('../images/green-saudi.jpg');
-}
+.old-era { background-image: url('../images/old-farm.jpg'); }
+.foundation-era { background-image: url('../images/ministry.jpg'); }
+.green-boom { background-image: url('../images/agriculture-modern.jpg'); }
+.vision-era { background-image: url('../images/green-saudi.jpg'); }
 
 .icon-gold {
     color: #c8a165 !important;
@@ -802,9 +751,7 @@ body.simple-mode {
     vertical-align: middle;
 }
 
-/* ==========================================================================
-   12.(Tools & Culture)
-   ========================================================================== */
+/* Tools & Culture Section */
 .tools-modern {
     padding: 50px 0;
 }
@@ -893,9 +840,7 @@ body.simple-mode {
     color: white;
 }
 
-/* ==========================================================================
-   13. (Hero Slider)
-   ========================================================================== */
+/* Hero Slider Section */
 .hero-slide {
     min-height: 500px;
     margin-bottom: 60px;
@@ -907,21 +852,11 @@ body.simple-mode {
     justify-content: center;
 }
 
-.slide-1 {
-    background-image: url('/static/images/ai-farm.jpg');
-}
+.slide-1 { background-image: url('/static/images/ai-farm.jpg'); }
+.slide-2 { background-image: url('/static/images/green-ksa.png'); }
+.slide-3 { background-image: url('/static/images/heritage-farm.jpg'); }
 
-.slide-2 {
-    background-image: url('/static/images/green-ksa.png');
-}
-
-.slide-3 {
-    background-image: url('/static/images/heritage-farm.jpg');
-}
-
-/* ==========================================================================
-   14. (Regions Masonry)
-   ========================================================================== */
+/* Regions Masonry Section */
 .regions-hero {
     height: 70vh;
     background: url('/static/images/oasis.jpg') center/cover no-repeat;
@@ -997,7 +932,6 @@ body.simple-mode {
     background: transparent;
 }
 
-
 .region-card .overlay a:hover {
     background: white;
     color: #4A2C18;
@@ -1005,12 +939,9 @@ body.simple-mode {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* ==========================================================================
-   15.(Footer Section)
-   ========================================================================== */
+/* Footer Section */
 .main-footer {
     background: linear-gradient(135deg, #102016, #09130c);
-    /* Extremely professional deep forest green */
     color: #e0e0e0;
     padding: 60px 0 30px;
     margin-top: 0px;
@@ -1066,37 +997,9 @@ body.simple-mode {
     padding: 0 20px;
 }
 
-.footer-col.right {
-    text-align: right;
-}
-
-.footer-col.center {
-    text-align: center;
-}
-
-.footer-col.left {
-    text-align: left;
-}
-
-
-/* --- Carousel & Stats --- */
-.carousel-item img {
-    height: 550px;
-    object-fit: cover;
-}
-
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 15px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 50px;
-    height: 50px;
-    filter: invert(0);
-
-}
+.footer-col.right { text-align: right; }
+.footer-col.center { text-align: center; }
+.footer-col.left { text-align: left; }
 
 .bg-dark {
     background: linear-gradient(45deg, #1a1a1a, #2c3e50) !important;
@@ -1106,32 +1009,7 @@ body.simple-mode {
     color: #ffd700 !important;
 }
 
-/* --- Mobile Responsive --- */
-@media (max-width: 768px) {
-
-    .page-timeline::after {
-        right: 20px;
-        left: auto;
-    }
-
-    .page-timeline-item {
-        width: 100%;
-        padding-right: 60px;
-        right: 0 !important;
-        text-align: right !important;
-    }
-
-    .page-timeline-img {
-        right: 0px !important;
-        left: auto !important;
-    }
-
-    .page-hero-content h1 {
-        font-size: 35px;
-    }
-}
-
-/* --- Hero Section --- */
+/* Growth Hero Section */
 .p-growth-hero {
     height: 100vh;
     background: url('/static/images/growth-bg.jpg') center/cover no-repeat;
@@ -1155,11 +1033,7 @@ body.simple-mode {
     z-index: 2;
 }
 
-
-
-/* ========================================== */
-/*  NEMA CARDS & PREMIUM CARDS */
-/* ========================================== */
+/*Nema & Premium Cards Section */
 .premium-tool-card {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(15px);
@@ -1228,9 +1102,11 @@ body.simple-mode {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ========================================== */
-/*  BENTO GRID */
-/* ========================================== */
+/*Bento Grid Section */
+.bento-section {
+    padding: 60px 0;
+}
+
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -1259,7 +1135,6 @@ body.simple-mode {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-
 .bento-main {
     grid-column: span 2;
     background-image: url('../images/forest_top.jpg');
@@ -1283,7 +1158,6 @@ body.simple-mode {
     grid-column: span 1;
 }
 
-/* العناصر الداخلية للـ Bento */
 .bento-overlay {
     position: absolute;
     bottom: 0;
@@ -1329,38 +1203,11 @@ body.simple-mode {
     display: inline-block;
 }
 
-
 .bento-btn-sm:hover {
     background-color: #67b16c;
     color: white !important;
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
-}
-
-.bento-section {
-    padding: 60px 0;
-}
-
-
-
-/* ========================================== */
-/*  RESPONSIVE  */
-/* ========================================== */
-@media (max-width: 992px) {
-    .bento-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-    }
-
-    .bento-main,
-    .bento-tall {
-        grid-column: span 2;
-        height: 300px;
-    }
-
-    .p-growth-slider-wrapper {
-        height: 350px;
-    }
 }
 
 .bento-btn {
@@ -1385,11 +1232,7 @@ body.simple-mode {
     transform: translateX(-5px);
 }
 
-
-/* ========================================== */
-/*  IMAGE SLIDER  */
-/* ========================================== */
-
+/* Image Comparison Slider Section */
 .p-growth-slider-wrapper {
     position: relative;
     height: 500px;
@@ -1405,18 +1248,15 @@ body.simple-mode {
     left: 0;
     width: 100%;
     height: 100%;
-
     background-size: cover;
     background-position: left center;
     background-repeat: no-repeat;
 }
 
-
 .p-growth-img-after {
     background-image: url('/static/images/growth_before.png');
     z-index: 1;
 }
-
 
 .p-growth-img-before {
     background-image: url('/static/images/growth_after.jpg');
@@ -1447,7 +1287,6 @@ body.simple-mode {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     width: 45px;
     height: 45px;
     background: #2e7d32;
@@ -1456,64 +1295,43 @@ body.simple-mode {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-
 .p-growth-range {
     position: absolute;
     appearance: none;
     -webkit-appearance: none;
-
     width: 100%;
     height: 100%;
-
     background: transparent;
     outline: none;
     margin: 0;
-
     cursor: ew-resize;
     z-index: 10;
 }
 
-
 .p-growth-range::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 0;
-    height: 0;
-    opacity: 0;
+    width: 0; height: 0; opacity: 0;
 }
 
 .p-growth-range::-moz-range-thumb {
-    width: 0;
-    height: 0;
-    opacity: 0;
-    border: none;
+    width: 0; height: 0; opacity: 0; border: none;
 }
-
 
 .p-growth-label {
     position: absolute;
     bottom: 20px;
-
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
-
     padding: 6px 14px;
     border-radius: 20px;
-
     font-size: 14px;
     z-index: 5;
 }
 
-.p-growth-label.left {
-    left: 20px;
-}
+.p-growth-label.left { left: 20px; }
+.p-growth-label.right { right: 20px; }
 
-.p-growth-label.right {
-    right: 20px;
-}
-
-/* ============================
-   16.(Animations & Responsive)
-   ============================ */
+/* Animations Section */
 .reveal {
     opacity: 0;
     transform: translateY(60px);
@@ -1526,70 +1344,11 @@ body.simple-mode {
 }
 
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 992px) {
-    .timeline-pro::before {
-        left: 30px;
-        transform: none;
-    }
-
-    .timeline-row {
-        flex-direction: column !important;
-        align-items: flex-start;
-        gap: 30px;
-        padding-left: 60px;
-        padding-right: 20px;
-        margin-bottom: 80px;
-    }
-
-    .timeline-row::after {
-        left: 30px;
-    }
-
-    .timeline-text,
-    .timeline-img {
-        width: 100%;
-        text-align: right !important;
-        padding: 0;
-    }
-
-    .timeline-img {
-        height: 280px;
-    }
-
-    .regions-masonry {
-        column-count: 2;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer-row {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-col {
-        margin-bottom: 20px;
-        text-align: center !important;
-    }
-}
-
-@media (max-width: 576px) {
-    .regions-masonry {
-        column-count: 1;
-    }
-}
-
+/* Secondary Page Sections (Hero Video & Timeline) */
 .page-hero {
     position: relative;
     height: 100vh;
@@ -1640,7 +1399,6 @@ body.simple-mode {
     transform: scale(1.02);
 }
 
-/* --- Timeline --- */
 .page-timeline {
     position: relative;
     max-width: 1000px;
@@ -1666,14 +1424,230 @@ body.simple-mode {
     text-align: right;
 }
 
-.page-timeline-item.right {
+.page-timeline-item.right { right: 0; }
+.page-timeline-item.left { right: 50%; }
+
+/* Responsive Queries */
+@media (max-width: 992px) {
+    .timeline-pro::before {
+        left: 30px;
+        transform: none;
+    }
+
+    .timeline-row {
+        flex-direction: column !important;
+        align-items: flex-start;
+        gap: 30px;
+        padding-left: 60px;
+        padding-right: 20px;
+        margin-bottom: 80px;
+    }
+
+    .timeline-row::after {
+        left: 30px;
+    }
+
+    .timeline-text,
+    .timeline-img {
+        width: 100%;
+        text-align: right !important;
+        padding: 0;
+    }
+
+    .timeline-img {
+        height: 280px;
+    }
+
+    .regions-masonry {
+        column-count: 2;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .bento-main,
+    .bento-tall {
+        grid-column: span 2;
+        height: 300px;
+    }
+
+    .p-growth-slider-wrapper {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-col {
+        margin-bottom: 20px;
+        text-align: center !important;
+    }
+
+    .page-timeline::after {
+        right: 20px;
+        left: auto;
+    }
+
+    .page-timeline-item {
+        width: 100%;
+        padding-right: 60px;
+        right: 0 !important;
+        text-align: right !important;
+    }
+
+    .page-timeline-img {
+        right: 0px !important;
+        left: auto !important;
+    }
+
+    .page-hero-content h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .regions-masonry {
+        column-count: 1;
+    }
+}
+/* Global & Page Elements */
+.page-festivals-title {
+    display: table !important;
+    margin: 0 auto 20px auto !important;
+    position: relative !important;
+    padding-bottom: 15px !important;
+}
+
+.page-separator-v2 {
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(to left, #8bc34a, #2e7d32);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
     right: 0;
 }
 
-.page-timeline-item.left {
-    right: 50%;
+.page-festival-card {
+    transition: 0.3s;
 }
 
+.page-festival-card:hover {
+    transform: translateY(-10px);
+}
+
+.bg-gradient-premium {
+    background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+}
+
+/* Carousel Section */
+.custom-carousel .carousel-item img {
+    height: 550px;
+    object-fit: cover;
+    filter: brightness(0.65);
+    transition: transform 0.8s ease;
+}
+
+.custom-carousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 2rem !important;
+    bottom: 40px;
+    border-top: 5px solid;
+}
+
+.custom-carousel .carousel-caption h3 {
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.custom-carousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(46, 125, 50, 0.8) !important;
+    border-radius: 50%;
+    opacity: 0.8;
+    margin: 0 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: rgba(46, 125, 50, 1) !important;
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    filter: none;
+}
+
+/* Unified Buttons Section */
+.hero-btn,
+.btn-main-trip,
+.culture-btn,
+.bento-btn-sm,
+.btn-success {
+    background: linear-gradient(135deg, #2e7d32, #1b5e20) !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3) !important;
+    color: white !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 50px !important;
+    text-align: center;
+}
+
+.hero-btn:hover,
+.btn-main-trip:hover,
+.culture-btn:hover,
+.bento-btn-sm:hover,
+.btn-success:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5) !important;
+    background: linear-gradient(135deg, #338a37, #217327) !important;
+}
+
+.btn-outline-success {
+    color: #2e7d32 !important;
+    border: 2px solid #2e7d32 !important;
+    background: transparent !important;
+    transition: all 0.3s ease !important;
+    font-weight: bold;
+}
+
+.btn-outline-success:hover {
+    background: linear-gradient(135deg, #2e7d32, #1b5e20) !important;
+    color: white !important;
+    border-color: transparent !important;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+/* Timeline & Growth Path Section */
 .page-timeline-img {
     position: absolute;
     width: 40px;
@@ -1704,84 +1678,117 @@ body.simple-mode {
     transition: 0.3s;
 }
 
-@media (max-width: 768px) {
-    .page-timeline::after {
-        left: 95%;
-    }
-
-    .page-timeline-item {
-        width: 100%;
-        padding-right: 50px;
-        right: 0 !important;
-    }
-
-    .page-timeline-item.left .page-timeline-img,
-    .page-timeline-item.right .page-timeline-img {
-        right: -10px;
-        left: auto;
-    }
+.path-wrapper {
+    position: relative;
+    padding: 40px 0;
 }
 
-/* --- Festivals Section --- */
-.page-festivals-title {
-    display: table !important;
-    margin: 0 auto 20px auto !important;
-    position: relative !important;
-    padding-bottom: 15px !important;
-}
-
-.page-separator-v2 {
-    width: 80px;
-    height: 5px;
-    background: linear-gradient(to left, #8bc34a, #2e7d32);
-    border-radius: 10px;
+.path-wrapper::before {
+    content: '';
     position: absolute;
-    bottom: 0;
-    right: 0;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #e9ecef;
+    transform: translateX(-50%);
 }
 
-.page-festival-card {
-    transition: 0.3s;
+.path-step {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 50px;
+    width: 50%;
+    position: relative;
 }
 
-.page-festival-card:hover {
-    transform: translateY(-10px);
+.path-step.right {
+    margin-right: auto;
+    justify-content: flex-end;
+    padding-left: 30px;
 }
 
-
-.custom-carousel .carousel-item img {
-    height: 550px;
-    object-fit: cover;
-    filter: brightness(0.65);
-    /* تغميق الصورة لبروز النص */
-    transition: transform 0.8s ease;
+.path-step.left {
+    padding-right: 30px;
 }
 
-.custom-carousel .carousel-caption {
-    background: rgba(0, 0, 0, 0.4);
-    /* خلفية داكنة خفيفة خلف النص */
-    backdrop-filter: blur(5px);
-    /* تأثير زجاجي */
-    border-radius: 20px;
-    padding: 2rem !important;
-    bottom: 40px;
-    border-top: 5px solid;
-    /* سيأخذ اللون من الكلاسات المعرفة في HTML */
+.path-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #198754;
+    width: 80%;
 }
 
-.custom-carousel .carousel-caption h3 {
-    font-weight: 800;
-    margin-top: 10px;
-}
-
-.custom-carousel .carousel-indicators button {
-    width: 12px;
-    height: 12px;
+.path-dot {
+    position: absolute;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background: #198754;
     border-radius: 50%;
-    margin: 0 5px;
+    z-index: 10;
 }
 
-/* تنسيقات خاصة بالوضع الليلي */
+.left .path-dot { right: -7.5px; }
+.right .path-dot { left: -7.5px; }
+
+.step-number {
+    font-size: 0.8rem;
+    color: #198754;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.growth-timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding-top: 20px;
+    direction: rtl;
+}
+
+.growth-timeline::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background: #e9ecef;
+    z-index: 1;
+}
+
+.growth-node {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 30%;
+}
+
+.node-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border: 2px solid #198754;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: #198754;
+    position: relative; 
+    z-index: 5; 
+}
+
+.node-icon i {
+    font-size: 26px;
+    line-height: 1;
+}
+
+/* Dark Mode Section */
 [data-bs-theme="dark"] {
     --bs-body-bg: #121212;
     --bs-body-color: #e0e0e0;
@@ -1862,58 +1869,8 @@ body.simple-mode {
     color: #e0e0e0 !important;
 }
 
-/* Background Gradients */
-.bg-gradient-premium {
-    background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
-}
-
 [data-bs-theme="dark"] .bg-gradient-premium {
     background: linear-gradient(135deg, #102216 0%, #0a140d 100%);
-}
-
-/* ==========================================================================
-   UNIFIED PREMIUM BUTTONS
-   ========================================================================== */
-.hero-btn,
-.btn-main-trip,
-.culture-btn,
-.bento-btn-sm,
-.btn-success {
-    background: linear-gradient(135deg, #2e7d32, #1b5e20) !important;
-    border: none !important;
-    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3) !important;
-    color: white !important;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    display: inline-block;
-    font-weight: bold;
-    border-radius: 50px !important;
-    text-align: center;
-}
-
-.hero-btn:hover,
-.btn-main-trip:hover,
-.culture-btn:hover,
-.bento-btn-sm:hover,
-.btn-success:hover {
-    transform: translateY(-3px) scale(1.02) !important;
-    box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5) !important;
-    background: linear-gradient(135deg, #338a37, #217327) !important;
-}
-
-.btn-outline-success {
-    color: #2e7d32 !important;
-    border: 2px solid #2e7d32 !important;
-    background: transparent !important;
-    transition: all 0.3s ease !important;
-    font-weight: bold;
-}
-
-.btn-outline-success:hover {
-    background: linear-gradient(135deg, #2e7d32, #1b5e20) !important;
-    color: white !important;
-    border-color: transparent !important;
-    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3) !important;
-    transform: translateY(-2px);
 }
 
 [data-bs-theme="dark"] .btn-outline-success {
@@ -1921,150 +1878,28 @@ body.simple-mode {
     border-color: #81c784 !important;
 }
 
-/* ==========================================================================
-   CAROUSEL PREMIUM CONTROLS
-   ========================================================================== */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 60px;
-    height: 60px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(46, 125, 50, 0.8) !important;
-    border-radius: 50%;
-    opacity: 0.8;
-    margin: 0 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+/* Responsive Settings */
+@media (max-width: 768px) {
+    .page-timeline::after {
+        left: 95%;
+    }
+
+    .page-timeline-item {
+        width: 100%;
+        padding-right: 50px;
+        right: 0 !important;
+    }
+
+    .page-timeline-item.left .page-timeline-img,
+    .page-timeline-item.right .page-timeline-img {
+        right: -10px;
+        left: auto;
+    }
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    background: rgba(46, 125, 50, 1) !important;
-    opacity: 1;
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 30px;
-    height: 30px;
-    filter: none;
-}
-
-
-.path-wrapper {
-    position: relative;
-    padding: 40px 0;
-}
-
-/* الخط الواصل في المنتصف */
-.path-wrapper::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: #e9ecef;
-    transform: translateX(-50%);
-}
-
-.path-step {
-    display: flex;
-    justify-content: flex-start;
-    padding-bottom: 50px;
-    width: 50%;
-    position: relative;
-}
-
-.path-step.right {
-    margin-right: auto;
-    justify-content: flex-end;
-    padding-left: 30px;
-}
-
-.path-step.left {
-    padding-right: 30px;
-}
-
-.path-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    border-left: 5px solid #198754;
-    width: 80%;
-}
-
-.path-dot {
-    position: absolute;
-    top: 20px;
-    width: 15px;
-    height: 15px;
-    background: #198754;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-.left .path-dot { right: -7.5px; }
-.right .path-dot { left: -7.5px; }
-
-.step-number {
-    font-size: 0.8rem;
-    color: #198754;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-}
-.growth-timeline {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* يضمن موازاة الأيقونات من الأعلى */
-    position: relative;
-    padding-top: 20px;
-    direction: rtl;
-}
-
-.growth-timeline::before {
-    content: '';
-    position: absolute;
-    top: 50px; /* المكان اللي ضبطناه قبل قليل */
-    
-    /* زيدي هذه النسب لتقصير الخط */
-    left: 15%;  /* يبعده عن جهة اليسار */
-    right: 15%; /* يبعده عن جهة اليمين */
-    
-    height: 2px;
-    background: #e9ecef;
-    z-index: 1;
-}
-
-.growth-node {
-    position: relative;
-    z-index: 2; /* يضمن أن الأيقونة فوق الخط */
-    text-align: center;
-    width: 30%;
-}
-
-.node-icon {
-    width: 60px;
-    height: 60px;
-    background-color: #ffffff; /* تأكدي أن الخلفية بيضاء سادة */
-    border: 2px solid #198754;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-    color: #198754;
-    
-    /* هذي السطرين أهم شيء لظهور الأيقونة */
-    position: relative; 
-    z-index: 5; 
-}
-
-.node-icon i {
-    font-size: 26px;
-    line-height: 1;
+.map-wrapper {
+    height: 400px; 
+    border: 8px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 1rem;
+    overflow: hidden; 
 }

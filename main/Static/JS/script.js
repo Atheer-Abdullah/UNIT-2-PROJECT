@@ -14,11 +14,10 @@ function initTheme() {
         }
     }
 
-    // استعادة الثيم المحفوظ
     const savedTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-bs-theme', savedTheme);
     updateIcon(savedTheme);
 
-    // تبديل الثيم 
     themeToggler.addEventListener('click', () => {
         const currentTheme = htmlElement.getAttribute('data-bs-theme');
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
@@ -27,13 +26,11 @@ function initTheme() {
         localStorage.setItem('theme', newTheme);
         updateIcon(newTheme);
 
-    
         document.body.classList.toggle("dark-mode", newTheme === 'dark');
     });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-
 
     initTheme();
 
@@ -88,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    /* IMAGE SLIDER */
+    /* IMAGE SLIDER (Before/After) */
     const slider = document.getElementById('growthSlider');
     const beforeImg = document.querySelector('.p-growth-img-before');
     const beforeText = document.querySelector('.before-text');
@@ -134,22 +131,57 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollObserver.observe(item);
     });
 
-    /* MAP LOGIC */
+    /* MAP LOGIC - 13 REGIONS */
     const mapElement = document.getElementById("map");
     if (mapElement) {
-        var map = L.map('map').setView([23.8859, 45.0792], 6);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: ''
-        }).addTo(map);
+        var map = L.map('map', {
+            scrollWheelZoom: false 
+        }).setView([23.8859, 45.0792], 5);
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '...',
+    maxZoom: 20
+}).addTo(map);
+
+const imageUrl = '/static/images/ksa-map.svg';
+const imageBounds = [[32.14, 34.48], [16.38, 55.66]];
+
+L.imageOverlay(imageUrl, imageBounds, {
+    opacity: 0.6, 
+    interactive: false 
+}).addTo(map);
 
         const locations = [
-            { pos: [26.2078, 43.4837], text: " القصيم: أشهر مناطق إنتاج التمور" },
-            { pos: [16.8892, 42.5511], text: " جازان: موطن البن الخولاني" },
-            { pos: [21.2703, 40.4158], text: " الطائف: الورد الطائفي الشهير" }
+            { pos: [24.7136, 46.6753], text: "منطقة الرياض", url: "/regions/riyadh/" },
+            { pos: [21.4858, 39.1925], text: "منطقة مكة المكرمة", url: "/regions/makkah/" },
+            { pos: [24.4672, 39.6024], text: "منطقة المدينة المنورة", url: "/regions/madinah/" },
+            { pos: [26.3260, 43.9750], text: "منطقة القصيم: سلة غذاء المملكة", url: "/regions/qassim/" },
+            { pos: [26.4207, 50.0888], text: "المنطقة الشرقية", url: "/regions/eastern/" },
+            { pos: [18.2465, 42.5117], text: "منطقة عسير", url: "/regions/asir/" },
+            { pos: [28.3835, 36.5662], text: "منطقة تبوك", url: "/regions/tabuk/" },
+            { pos: [27.5114, 41.7208], text: "منطقة حائل", url: "/regions/hail/" },
+            { pos: [30.0000, 42.0000], text: "منطقة الحدود الشمالية", url: "/regions/northern-borders/" },
+            { pos: [16.8892, 42.5511], text: "منطقة جازان: موطن البن", url: "/regions/jazan/" },
+            { pos: [17.4933, 44.1272], text: "منطقة نجران", url: "/regions/najran/" },
+            { pos: [20.0129, 41.4677], text: "منطقة الباحة", url: "/regions/al-baha/" },
+            { pos: [29.9678, 40.1975], text: "منطقة الجوف: غصن الزيتون", url: "/regions/al-jouf/" }
         ];
 
         locations.forEach(loc => {
-            L.marker(loc.pos).addTo(map).bindPopup(loc.text);
+            const marker = L.marker(loc.pos).addTo(map);
+            const popupContent = `
+                <div class="text-center p-2">
+                    <h6 class="fw-bold m-0">${loc.text}</h6>
+                    <a href="${loc.url}" class="btn btn-sm btn-success text-white rounded-pill mt-2 px-3">
+                        استكشف المنطقة
+                    </a>
+                </div>
+            `;
+            marker.bindPopup(popupContent);
         });
     }
 });
+
+setTimeout(function(){ 
+    map.invalidateSize(); 
+}, 500);
