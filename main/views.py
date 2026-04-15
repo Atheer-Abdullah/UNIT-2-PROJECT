@@ -7,7 +7,7 @@ def home(request):
     response.set_cookie("is_visitor", "yes", max_age=60*60*24)
     return response
 
-# صفحة المناطق - تقرأ الكوكي الموقع (Signed) لتعرض آخر منطقة
+# صفحة المناطق - تقرأ الكوكي الموقع (Signed) لعرض آخر منطقة
 def regions(request):
     try:
         # فك تشفير الكوكي الموقع
