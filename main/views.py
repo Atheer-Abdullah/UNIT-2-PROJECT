@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
+from django.http import HttpRequest, HttpResponse
 from django.template import TemplateDoesNotExist
 
 #  الصفحة الرئيسية - ترسل كوكي الزائر العادي
-def home(request):
+def home(request:HttpRequest):
     response = render(request, 'main/index.html')
     response.set_cookie("is_visitor", "yes", max_age=60*60*24)
     return response
@@ -37,20 +38,20 @@ def region_detail(request):
         return redirect('regions')
 
 
-def features(request):
+def features(request:HttpRequest):
     return render(request, 'main/features.html')
 
-def growth_journey(request):
+def growth_journey(request:HttpRequest):
     return render(request, 'main/growth.html')
 
-def map_view(request):
+def map_view(request:HttpRequest):
     return render(request, 'main/map.html')
 
-def vision(request):
+def vision(request:HttpRequest):
     return render(request, 'main/vision.html')
 
-def contact(request):
+def contact(request:HttpRequest):
     return render(request, 'main/contact.html')
 
-def education(request):
+def education(request:HttpRequest):
     return render(request, 'main/education.html')
