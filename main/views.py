@@ -26,7 +26,7 @@ def region_detail(request):
     region_name = request.GET.get('name', '').lower()
 
     if not region_name:
-        return redirect('regions')
+        return redirect('main:regions')
 
     template_path = f'main/{region_name}.html'
     
@@ -35,7 +35,7 @@ def region_detail(request):
         response.set_signed_cookie("last_region", region_name)
         return response
     except TemplateDoesNotExist:
-        return redirect('regions')
+        return redirect('main:regions')
 
 
 def features(request:HttpRequest):
